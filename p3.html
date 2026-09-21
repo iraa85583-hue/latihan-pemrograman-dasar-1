@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profil Ira Andini</title>
+
+
+    <style>
+
+        /* =========================
+           PENGATURAN DASAR
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #eef5f9, #f8f4ee);
+            color: #333;
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: linear-gradient(135deg, #274c77, #6096ba);
+            color: white;
+            text-align: center;
+            padding: 65px 20px;
+        }
+
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+
+        header p {
+            font-size: 17px;
+            margin: 4px;
+        }
+
+
+        /* =========================
+           FOTO PROFIL
+        ========================= */
+
+        .foto-container {
+            text-align: center;
+            margin-top: -70px;
+        }
+
+
+        .foto-profil {
+            width: 155px;
+            height: 155px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid white;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.18);
+        }
+
+
+        /* =========================
+           CONTAINER
+        ========================= */
+
+        .container {
+            max-width: 900px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+
+        /* =========================
+           CARD
+        ========================= */
+
+        .card {
+            background: white;
+            padding: 32px;
+            margin-bottom: 25px;
+            border-radius: 20px;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.07);
+        }
+
+
+        .card h2 {
+            text-align: center;
+            color: #274c77;
+            margin-bottom: 25px;
+            font-size: 27px;
+        }
+
+
+        /* =========================
+           BIODATA
+        ========================= */
+
+        .biodata p {
+            margin: 11px 0;
+            padding: 12px 15px;
+            background: #f4f7f9;
+            border-radius: 10px;
+        }
+
+
+        .biodata b {
+            display: inline-block;
+            width: 150px;
+            color: #274c77;
+        }
+
+
+        .deskripsi {
+            margin-top: 22px !important;
+            text-align: center;
+            background: transparent !important;
+            padding: 5px !important;
+        }
+
+
+        /* =========================
+           RIWAYAT PENDIDIKAN
+        ========================= */
+
+        .pendidikan {
+            margin-top: 10px;
+        }
+
+
+        .pendidikan-item {
+            background: #f4f7f9;
+            padding: 15px 18px;
+            margin-bottom: 12px;
+
+            border-left: 4px solid #6096ba;
+            border-radius: 8px;
+        }
+
+
+        .pendidikan-item h3 {
+            color: #274c77;
+            margin-bottom: 4px;
+        }
+
+
+        /* =========================
+           PORTOFOLIO
+        ========================= */
+
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+
+        .project {
+            background: #f2f6f8;
+            padding: 22px;
+            border-radius: 15px;
+
+            transition: 0.3s;
+        }
+
+
+        .project:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+
+        .project h3 {
+            color: #274c77;
+            margin-bottom: 8px;
+        }
+
+
+        /* =========================
+           FORM
+        ========================= */
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        label {
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #274c77;
+        }
+
+
+        input,
+        textarea {
+            padding: 13px;
+            margin-bottom: 16px;
+
+            border: 1px solid #d5dde3;
+            border-radius: 10px;
+
+            font-size: 15px;
+            outline: none;
+        }
+
+
+        input:focus,
+        textarea:focus {
+            border-color: #6096ba;
+        }
+
+
+        textarea {
+            resize: vertical;
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        button {
+            background: #274c77;
+            color: white;
+
+            border: none;
+
+            padding: 13px;
+
+            border-radius: 10px;
+
+            font-size: 16px;
+
+            cursor: pointer;
+        }
+
+
+        button:hover {
+            background: #19324f;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+        }
+
+
+        /* =========================
+           TAMPILAN HP
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 32px;
+            }
+
+
+            .portfolio {
+                grid-template-columns: 1fr;
+            }
+
+
+            .card {
+                padding: 22px;
+            }
+
+
+            .foto-profil {
+                width: 130px;
+                height: 130px;
+            }
+
+
+            .biodata b {
+                width: 120px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header>
+
+        <h1>Ira Andini</h1>
+
+        <p>Mahasiswa Universitas Qamarul Huda</p>
+
+        <p>Personal Profile Website</p>
+
+    </header>
+
+
+
+    <!-- =========================
+         FOTO PROFIL
+    ========================= -->
+
+    <div class="foto-container">
+
+        <img
+            src="foto.jpg"
+            alt="Foto Profil Ira Andini"
+            class="foto-profil"
+        >
+
+    </div>
+
+
+
+    <div class="container">
+
+
+        <!-- =========================
+             TENTANG SAYA
+        ========================= -->
+
+        <div class="card biodata">
+
+            <h2>Tentang Saya</h2>
+
+
+            <p>
+                <b>Nama:</b>
+                Ira Andini
+            </p>
+
+
+            <p>
+                <b>Jenis Kelamin:</b>
+                Perempuan
+            </p>
+
+
+            <p>
+                <b>Status:</b>
+                Mahasiswa
+            </p>
+
+
+            <p>
+                <b>Universitas:</b>
+                Universitas Qamarul Huda
+            </p>
+
+
+            <p>
+                <b>Alamat:</b>
+                Pengenjek
+            </p>
+
+
+            <p>
+                <b>No. HP:</b>
+                087760100490
+            </p>
+
+
+            <p>
+                <b>Email:</b>
+                andiniraa52@gmail.com
+            </p>
+
+
+            <p class="deskripsi">
+
+                Halo, saya Ira Andini.
+                Saya adalah mahasiswa Universitas Qamarul Huda
+                yang sedang belajar teknologi informasi,
+                HTML, UI/UX, dan pengembangan website.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             RIWAYAT PENDIDIKAN
+        ========================= -->
+
+        <div class="card">
+
+            <h2>Riwayat Pendidikan</h2>
+
+
+            <div class="pendidikan">
+
+
+                <div class="pendidikan-item">
+
+                    <h3>SD</h3>
+
+                    <p>
+                        SDN 2 Pengenjek
+                    </p>
+
+                </div>
+
+
+
+                <div class="pendidikan-item">
+
+                    <h3>SMP</h3>
+
+                    <p>
+                        SMPN 1 Pringgarata
+                    </p>
+
+                </div>
+
+
+
+                <div class="pendidikan-item">
+
+                    <h3>SMK</h3>
+
+                    <p>
+                        SMK Qamarul Huda Bagu
+                    </p>
+
+                </div>
+
+
+
+                <div class="pendidikan-item">
+
+                    <h3>Perguruan Tinggi</h3>
+
+                    <p>
+                        Universitas Qamarul Huda
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             PORTOFOLIO
+        ========================= -->
+
+        <div class="card">
+
+            <h2>Portofolio</h2>
+
+
+            <div class="portfolio">
+
+
+                <div class="project">
+
+                    <h3>01. Website Profil</h3>
+
+                    <p>
+                        Membuat website profil pribadi
+                        menggunakan HTML dan CSS.
+                    </p>
+
+                </div>
+
+
+
+                <div class="project">
+
+                    <h3>02. Website TPQ</h3>
+
+                    <p>
+                        Membuat website sederhana
+                        untuk informasi dan kegiatan TPQ.
+                    </p>
+
+                </div>
+
+
+
+                <div class="project">
+
+                    <h3>03. UI/UX</h3>
+
+                    <p>
+                        Mempelajari desain antarmuka
+                        dan pengalaman pengguna.
+                    </p>
+
+                </div>
+
+
+
+                <div class="project">
+
+                    <h3>04. HTML</h3>
+
+                    <p>
+                        Belajar membuat tabel, form,
+                        gambar, link, dan halaman website.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             HUBUNGI SAYA
+        ========================= -->
+
+        <div class="card">
+
+            <h2>Hubungi Saya</h2>
+
+
+            <form>
+
+
+                <label>Nama</label>
+
+                <input
+                    type="text"
+                    placeholder="Masukkan nama"
+                >
+
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    placeholder="Masukkan email"
+                >
+
+
+                <label>No. HP</label>
+
+                <input
+                    type="text"
+                    placeholder="087760100490"
+                >
+
+
+                <label>Pesan</label>
+
+                <textarea
+                    rows="5"
+                    placeholder="Tulis pesan kamu..."
+                ></textarea>
+
+
+                <button type="submit">
+                    Kirim Pesan
+                </button>
+
+
+            </form>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Ira Andini | Personal Website
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
